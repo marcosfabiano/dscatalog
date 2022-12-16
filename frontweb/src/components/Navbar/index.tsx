@@ -1,6 +1,5 @@
 import './styles.css';
 import 'bootstrap/js/src/collapse.js';
-
 import { Link, NavLink } from 'react-router-dom';
 import {
   getTokenData,
@@ -77,10 +76,10 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div>
+        <div className='nav-login-logout'>
           {authData.authenticated ? (
             <>
-              <span>{authData.tokenData?.user_name}</span>
+              <span className='nav-username'>{authData.tokenData?.user_name}</span>
               <a href="#logout" onClick={handleLogoutClick}>
                 LOGOUT
               </a>
